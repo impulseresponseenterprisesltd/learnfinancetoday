@@ -288,8 +288,9 @@
                 <div class="video-player">
                     <iframe 
                         id="videoPlayer"
-                        src="https://www.youtube.com/embed/Besv1olJJ-w" 
+                        src="https://www.youtube-nocookie.com/embed/Besv1olJJ-w" 
                         title="YouTube video player" 
+                        referrerpolicy="strict-origin-when-cross-origin"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
                     </iframe>
@@ -369,7 +370,7 @@
 
         // Function to load a video
         function loadVideo(videoId, title) {
-            videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+            videoPlayer.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
             videoTitle.textContent = title;
             
             // Update active state
