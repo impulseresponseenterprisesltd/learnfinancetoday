@@ -288,9 +288,10 @@
                 <div class="video-player">
                     <iframe 
                         id="videoPlayer"
-                        src="https://www.youtube.com/embed/BALKwbWz7ws" 
-                        title="YouTube video player" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        src="https://abyssplayer.com/Y-tLZCp_C" 
+                        title="Video player" 
+                        frameborder="0" 
+                        scrolling="0"
                         allowfullscreen>
                     </iframe>
                     <div class="video-player__info">
@@ -345,14 +346,14 @@
     </footer>
 
     <script>
-        // Video data for Ecommerce with WordPress
+        // Video data for Ecommerce with WordPress with Abyss.to links
         const videoList = [
-            { id: '1', videoId: 'BALKwbWz7ws', title: 'Lecture 1' },
-            { id: '2', videoId: 'dp6CnRYQ_Xk', title: 'Lecture 2' },
-            { id: '3', videoId: 'vxTjjS0_-J0', title: 'Lecture 3' },
-            { id: '4', videoId: 'D6WEdlJzqqI', title: 'Lecture 4' },
-            { id: '5', videoId: 'ycdeNFszi3U', title: 'Lecture 5' },
-            { id: '6', videoId: 'cZVv9xJYrNU', title: 'Lecture 6' },
+            { id: '1', videoId: 'Y-tLZCp_C', title: 'Lecture 1' },
+            { id: '2', videoId: '-a2uQWugB', title: 'Lecture 2' },
+            { id: '3', videoId: 'QLVDzd-SU', title: 'Lecture 3' },
+            { id: '4', videoId: '4S7-0pua8', title: 'Lecture 4' },
+            { id: '5', videoId: 'nERgnTTRS', title: 'Lecture 5' },
+            { id: '6', videoId: '_8NnsYv2V', title: 'Lecture 6' },
         ];
 
         // DOM elements
@@ -362,7 +363,7 @@
 
         // Function to load a video
         function loadVideo(videoId, title) {
-            videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+            videoPlayer.src = `https://abyssplayer.com/${videoId}`;
             videoTitle.textContent = title;
             
             // Update active state
