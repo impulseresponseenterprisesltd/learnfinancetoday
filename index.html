@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Finance Today · Home</title>
+    <!-- stylesheet: E:\Stuff\App Development\learnfinancetoday\styles.css -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <style>
+        /* Additional styles for the company info section */
+        .company-info {
+            padding: 4.5rem 0;
+            background: #0b2b4a;
+            color: #fff;
+        }
+        .company-info__container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .company-info__title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .company-info__description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.92;
+            margin-bottom: 1.5rem;
+        }
+        .company-info__skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .company-info__skill-tag {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .company-info__cta {
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.5rem;
+            font-weight: 500;
+        }
+        .company-info__website {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            color: #ffb347;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .company-info__website:hover {
+            color: #ffa726;
+            border-bottom-color: #ffa726;
+        }
+
+        /* Updated hero image styles */
+        .hero__image img {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 40px;
+            box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .company-info__title {
+                font-size: 1.8rem;
+            }
+            .company-info__skills {
+                gap: 0.5rem;
+            }
+            .company-info__skill-tag {
+                font-size: 0.8rem;
+                padding: 0.3rem 1rem;
+            }
+            .hero__image img {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">
+                <span class="logo__icon">📊</span>
+                <span class="logo__text">LearnFinance<span class="logo__highlight">Today</span></span>
+            </div>
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="courses.html" class="nav__link">Courses</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation" id="menuToggle">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <div class="hero__badge">📈 new · financial literacy</div>
+                    <h1 class="hero__title">Master your money, <br /><span class="hero__title--accent">starting today</span></h1>
+                    <p class="hero__description">
+                        Learn Finance Today gives you the tools and knowledge to take control of your financial future.
+                        From budgeting to investing — all in one place.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="courses.html" class="btn btn--outline btn--large">Explore courses</a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat">
+                            <span class="stat__number">12k+</span>
+                            <span class="stat__label">students enrolled</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">98%</span>
+                            <span class="stat__label">satisfaction rate</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">4.9★</span>
+                            <span class="stat__label">average rating</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img 
+                        src="https://img.freepik.com/premium-photo/tablet-displaying-stock-market-data-top-financial-charts_36682-147693.jpg" 
+                        alt="Tablet displaying stock market data and financial charts" 
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Why learn with us?</h2>
+                    <p class="section__subtitle">Practical, clear, and built for real life.</p>
+                </div>
+                <div class="features__grid">
+                    <article class="feature-card">
+                        <div class="feature-card__icon">🧠</div>
+                        <h3 class="feature-card__title">Bite-sized lessons</h3>
+                        <p class="feature-card__desc">Learn at your own pace with short, focused modules that fit your schedule.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon">📊</div>
+                        <h3 class="feature-card__title">Real-world tools</h3>
+                        <p class="feature-card__desc">Budget calculators, investment simulators, and practical templates.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon">🎓</div>
+                        <h3 class="feature-card__title">Expert guidance</h3>
+                        <p class="feature-card__desc">Content created by financial professionals with years of experience.</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-card__icon">🏆</div>
+                        <h3 class="feature-card__title">Track your progress</h3>
+                        <p class="feature-card__desc">Earn certificates and see your financial confidence grow.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Info Section (replaces CTA) -->
+        <section class="company-info">
+            <div class="container company-info__container">
+                <h2 class="company-info__title">🚀 Built by Impulse Response Enterprises Ltd</h2>
+                <p class="company-info__description">
+                    This product was developed by <strong>Impulse Response Enterprises Ltd</strong>. 
+                    We specialize in economics, finance, React Native, Python, MATLAB, and Unreal Engine. 
+                    Let us develop innovative solutions for your business.
+                </p>
+                <div class="company-info__skills">
+                    <span class="company-info__skill-tag">📈 Economics</span>
+                    <span class="company-info__skill-tag">💰 Finance</span>
+                    <span class="company-info__skill-tag">📱 React Native</span>
+                    <span class="company-info__skill-tag">🐍 Python</span>
+                    <span class="company-info__skill-tag">📊 MATLAB</span>
+                    <span class="company-info__skill-tag">🎮 Unreal Engine</span>
+                </div>
+                <p class="company-info__cta">
+                    📧 Contact Impulse Response Enterprises Ltd and let us develop solutions for you.
+                </p>
+                <a href="https://www.impulseresponseenterprises.cc" target="_blank" class="company-info__website">
+                    🌐 Visit us at www.impulseresponseenterprises.cc
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <span class="logo__text">LearnFinance<span class="logo__highlight">Today</span></span>
+                <p class="footer__copy">© 2026 · Empowering financial freedom.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const nav = document.querySelector('.nav');
+            if (toggle && nav) {
+                toggle.addEventListener('click', function() {
+                    nav.classList.toggle('nav--open');
+                    toggle.classList.toggle('menu-toggle--active');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

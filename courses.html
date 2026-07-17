@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Finance Today · Courses</title>
+    <!-- stylesheet: E:\Stuff\App Development\learnfinancetoday\styles.css -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <!-- Additional styles specific to courses page -->
+    <style>
+        /* Courses page specific styles */
+        .courses-hero {
+            padding: 3rem 0 2rem;
+            background: linear-gradient(145deg, #f0f6fe 0%, #ffffff 100%);
+            text-align: center;
+        }
+        .courses-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+        .courses-hero p {
+            font-size: 1.15rem;
+            color: #2b405a;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .courses-grid {
+            padding: 3rem 0 5rem;
+            background: #ffffff;
+        }
+        .courses-grid__container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: #f8fafd;
+            border-radius: 28px;
+            padding: 2rem 1.8rem;
+            border: 1px solid #e9eef4;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.12);
+            border-color: #cddae9;
+        }
+        .course-card__icon {
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+        }
+        .course-card__title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #0b2b4a;
+        }
+        .course-card__description {
+            color: #2f4763;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            margin-bottom: 1.2rem;
+        }
+        .course-card__meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e8f0;
+            font-size: 0.9rem;
+            color: #4e657f;
+        }
+        .course-card__meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .course-card .btn {
+            margin-top: 0.5rem;
+        }
+
+        /* Company Info Section - same as index.html */
+        .company-info {
+            padding: 4.5rem 0;
+            background: #0b2b4a;
+            color: #fff;
+        }
+        .company-info__container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .company-info__title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .company-info__description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.92;
+            margin-bottom: 1.5rem;
+        }
+        .company-info__skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .company-info__skill-tag {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .company-info__cta {
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.5rem;
+            font-weight: 500;
+        }
+        .company-info__website {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            color: #ffb347;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .company-info__website:hover {
+            color: #ffa726;
+            border-bottom-color: #ffa726;
+        }
+
+        @media (max-width: 768px) {
+            .courses-hero h1 {
+                font-size: 2.2rem;
+            }
+            .courses-grid__container {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .company-info__title {
+                font-size: 1.8rem;
+            }
+            .company-info__skills {
+                gap: 0.5rem;
+            }
+            .company-info__skill-tag {
+                font-size: 0.8rem;
+                padding: 0.3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">
+                <span class="logo__icon">📊</span>
+                <span class="logo__text">LearnFinance<span class="logo__highlight">Today</span></span>
+            </div>
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="courses.html" class="nav__link active">Courses</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation" id="menuToggle">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Courses Hero -->
+        <section class="courses-hero">
+            <div class="container">
+                <h1>📚 Our Courses</h1>
+                <p>Practical, hands-on training to help you master finance and build real-world skills.</p>
+            </div>
+        </section>
+
+        <!-- Courses Grid -->
+        <section class="courses-grid">
+            <div class="container">
+                <div class="courses-grid__container">
+                    <!-- Course 1: Day Trading Intro -->
+                    <div class="course-card">
+                        <div class="course-card__icon">📈</div>
+                        <h3 class="course-card__title">A Practical Introduction to Day Trading</h3>
+                        <p class="course-card__description">
+                            Learn the fundamentals of day trading, including market structure, risk management, and proven strategies to get started with confidence.
+                        </p>
+                        <div class="course-card__meta">
+                            <span>⏱️ 6 weeks</span>
+                            <span>📊 Beginner</span>
+                        </div>
+                        <a href="pidt.html" class="btn btn--primary btn--small">Start now</a>
+                    </div>
+
+                    <!-- Course 2: Day Trading Stocks -->
+                    <div class="course-card">
+                        <div class="course-card__icon">📊</div>
+                        <h3 class="course-card__title">Day Trading Stocks</h3>
+                        <p class="course-card__description">
+                            Master stock trading techniques, technical analysis, chart patterns, and develop a disciplined approach to trading equities.
+                        </p>
+                        <div class="course-card__meta">
+                            <span>⏱️ 8 weeks</span>
+                            <span>📈 Intermediate</span>
+                        </div>
+                        <a href="dts.html" class="btn btn--primary btn--small">Start now</a>
+                    </div>
+
+                    <!-- Course 3: Ecommerce with Shopify -->
+                    <div class="course-card">
+                        <div class="course-card__icon">🛍️</div>
+                        <h3 class="course-card__title">Ecommerce with Shopify</h3>
+                        <p class="course-card__description">
+                            Build and scale your own online store using Shopify. Learn product sourcing, marketing, SEO, and conversion optimization.
+                        </p>
+                        <div class="course-card__meta">
+                            <span>⏱️ 5 weeks</span>
+                            <span>📊 Beginner</span>
+                        </div>
+                        <a href="ews.html" class="btn btn--primary btn--small">Start now</a>
+                    </div>
+
+                    <!-- Course 4: Ecommerce with WordPress -->
+                    <div class="course-card">
+                        <div class="course-card__icon">🌐</div>
+                        <h3 class="course-card__title">Ecommerce with WordPress</h3>
+                        <p class="course-card__description">
+                            Create a powerful ecommerce website with WordPress and WooCommerce. Master plugins, themes, payment gateways, and more.
+                        </p>
+                        <div class="course-card__meta">
+                            <span>⏱️ 6 weeks</span>
+                            <span>📈 Intermediate</span>
+                        </div>
+                        <a href="ewp.html" class="btn btn--primary btn--small">Start now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Info Section (same as index.html) -->
+        <section class="company-info">
+            <div class="container company-info__container">
+                <h2 class="company-info__title">🚀 Built by Impulse Response Enterprises Ltd</h2>
+                <p class="company-info__description">
+                    This product was developed by <strong>Impulse Response Enterprises Ltd</strong>. 
+                    We specialize in economics, finance, React Native, Python, MATLAB, and Unreal Engine. 
+                    Let us develop innovative solutions for your business.
+                </p>
+                <div class="company-info__skills">
+                    <span class="company-info__skill-tag">📈 Economics</span>
+                    <span class="company-info__skill-tag">💰 Finance</span>
+                    <span class="company-info__skill-tag">📱 React Native</span>
+                    <span class="company-info__skill-tag">🐍 Python</span>
+                    <span class="company-info__skill-tag">📊 MATLAB</span>
+                    <span class="company-info__skill-tag">🎮 Unreal Engine</span>
+                </div>
+                <p class="company-info__cta">
+                    📧 Contact Impulse Response Enterprises Ltd and let us develop solutions for you.
+                </p>
+                <a href="https://www.impulseresponseenterprises.cc" target="_blank" class="company-info__website">
+                    🌐 Visit us at www.impulseresponseenterprises.cc
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <span class="logo__text">LearnFinance<span class="logo__highlight">Today</span></span>
+                <p class="footer__copy">© 2026 · Empowering financial freedom.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const nav = document.querySelector('.nav');
+            if (toggle && nav) {
+                toggle.addEventListener('click', function() {
+                    nav.classList.toggle('nav--open');
+                    toggle.classList.toggle('menu-toggle--active');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
