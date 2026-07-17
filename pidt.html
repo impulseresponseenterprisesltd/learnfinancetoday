@@ -288,10 +288,10 @@
                 <div class="video-player">
                     <iframe 
                         id="videoPlayer"
-                        src="https://www.youtube-nocookie.com/embed/Besv1olJJ-w" 
-                        title="YouTube video player" 
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        src="https://abyssplayer.com/40OMQ0buJ" 
+                        title="Video player" 
+                        frameborder="0" 
+                        scrolling="0"
                         allowfullscreen>
                     </iframe>
                     <div class="video-player__info">
@@ -346,21 +346,21 @@
     </footer>
 
     <script>
-        // Video data
+        // Video data with Abyss.to links
         const videoList = [
-            { id: "1", videoId: "Besv1olJJ-w", title: "Lecture 1" },
-            { id: "2", videoId: "s2S5eD8eS2I", title: "Lecture 2" },
-            { id: "3", videoId: "UQdc8fAEGGE", title: "Lecture 3" },
-            { id: "4", videoId: "EjlPxNFifdc", title: "Lecture 4" },
-            { id: "5", videoId: "wX1AdUlX_oU", title: "Lecture 5" },
-            { id: "6", videoId: "P3-Qfcfu2tY", title: "Lecture 6" },
-            { id: "7", videoId: "tGo3m2PYKY8", title: "Lecture 7" },
-            { id: "8", videoId: "9alqF93L66E", title: "Lecture 8" },
-            { id: "9", videoId: "mjq0o7A1AXs", title: "Lecture 9" },
-            { id: "10", videoId: "lJ1nVoIIfWM", title: "Lecture 10" },
-            { id: "11", videoId: "fEs4aCf-QBo", title: "Lecture 11" },
-            { id: "12", videoId: "ksVmqrQDBSE", title: "Lecture 12" },
-            { id: "13", videoId: "ZhSiMEATtB8", title: "Lecture 13" },
+            { id: "1", videoId: "40OMQ0buJ", title: "Lecture 1" },
+            { id: "2", videoId: "ruG7OUjoW", title: "Lecture 2" },
+            { id: "3", videoId: "PIdl1qqwt", title: "Lecture 3" },
+            { id: "4", videoId: "Hf72Ge6I3", title: "Lecture 4" },
+            { id: "5", videoId: "TFpmp15RuT", title: "Lecture 5" },
+            { id: "6", videoId: "YQC29KAPG", title: "Lecture 6" },
+            { id: "7", videoId: "mp0Ej47LG", title: "Lecture 7" },
+            { id: "8", videoId: "bTdVs8mA9", title: "Lecture 8" },
+            { id: "9", videoId: "sXoeERB-E", title: "Lecture 9" },
+            { id: "10", videoId: "fJ_OcRFmg", title: "Lecture 10" },
+            { id: "11", videoId: "i0RrMKxSo", title: "Lecture 11" },
+            { id: "12", videoId: "-cDMNf4Tm", title: "Lecture 12" },
+            { id: "13", videoId: "HA4bxS4dw", title: "Lecture 13" },
         ];
 
         // DOM elements
@@ -370,7 +370,7 @@
 
         // Function to load a video
         function loadVideo(videoId, title) {
-            videoPlayer.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+            videoPlayer.src = `https://abyssplayer.com/${videoId}`;
             videoTitle.textContent = title;
             
             // Update active state
